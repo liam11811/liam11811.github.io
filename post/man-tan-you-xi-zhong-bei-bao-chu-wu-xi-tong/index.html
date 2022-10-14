@@ -1,0 +1,223 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>漫谈游戏中背包（储物）系统 | Gamer的个人博客</title>
+<link rel="shortcut icon" href="https://liam11811.github.io/favicon.ico?v=1665749981801">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://liam11811.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="漫谈游戏中背包（储物）系统 | Gamer的个人博客 - Atom Feed" href="https://liam11811.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="在本文中，笔者将不拘于特定的游戏类型，漫谈游戏经历中给自己较深印象的背包（储物）系统。
+1.射击游戏
+在《穿越火线》《逆战》这类团队竞技射击游戏中，一个背包只能装备一个主武器，因此不同的背包配备往往意味着不同的战术选择。要在单局内游玩到更多..." />
+    <meta name="keywords" content="MMO,FPS,RPG" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://liam11811.github.io">
+  <img class="avatar" src="https://liam11811.github.io/images/avatar.png?v=1665749981801" alt="">
+  </a>
+  <h1 class="site-title">
+    Gamer的个人博客
+  </h1>
+  <p class="site-description">
+    记录游戏过程中的所思所想
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              漫谈游戏中背包（储物）系统
+            </h2>
+            <div class="post-info">
+              <span>
+                2022-10-08
+              </span>
+              <span>
+                10 min read
+              </span>
+              
+                <a href="https://liam11811.github.io/tag/mEamTqE1c/" class="post-tag">
+                  # MMO
+                </a>
+              
+                <a href="https://liam11811.github.io/tag/ZIz6yrTLQ/" class="post-tag">
+                  # FPS
+                </a>
+              
+                <a href="https://liam11811.github.io/tag/Hr0R0RhvFA/" class="post-tag">
+                  # RPG
+                </a>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://liam11811.github.io/post-images/man-tan-you-xi-zhong-bei-bao-chu-wu-xi-tong.png" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <p>在本文中，笔者将不拘于特定的游戏类型，漫谈游戏经历中给自己较深印象的背包（储物）系统。</p>
+<h2 id="1射击游戏"><strong>1.射击游戏</strong></h2>
+<p>在《穿越火线》《逆战》这类团队竞技射击游戏中，一个背包只能装备一个主武器，因此不同的背包配备往往意味着不同的战术选择。要在单局内游玩到更多的战术选择就需要付费解锁更多背包。</p>
+<p>不同于团队竞技，大逃杀是极其重视资源收集、取舍、高效利用的射击游戏，背包正是资源的储存空间。《Apex英雄》有“<strong>背包管理</strong>”的说法，“背包管理”是背包容量有限、资源有限的前提下，玩家对自己应该携带什么、携带多少的一种策略性安排。作为存在单局内成长的大逃杀游戏，《Apex英雄》也在每局游戏中投放了容量不同的背包，其容量分别为8、10、12、14、16格。不同资源的单格堆叠上限也不同。以弹药为例，轻型、重型、能量弹药的单格堆叠上限均为60，霰弹弹药堆叠上限为16，狙击弹药堆叠上限为24。</p>
+<p>笔者猜测，对于每种弹药，其（单格堆叠上限×单发平均伤害×平均命中率）的乘积应该相差不远，否则将会出现某些枪族过于强势的情况；又考虑到狙击和霰弹的最佳交战距离较局限、上手难度较高，该乘积可以略微拔高，以鼓励水平较高、敢于挑战的玩家。遗憾的是，由于平均命中率这一项数据的缺失，笔者的想法只能停留在猜想层面。</p>
+<p>《逃离塔科夫》是一款高度拟真的FPS，而且其重视资源管理和携带物筛选的程度不下于大逃杀。这款游戏的背包也是划分成格子的，但不同携带物占用的格子数不同，而且枪械、弹匣等大件物品还会占据组合成一定形状的多个格子。笔者将这样设计的背包称作“<strong>俄罗斯方块式背包</strong>”。除了容量和易得性，影响玩家对背包选择的还有空间划分方式和外观：游戏中一些大背包的空间会被切分得四分五裂，考虑到“俄罗斯方块”的特性，其利用率还将打折扣；还有一些背包外观过于高调，对玩家的隐匿不利。除了背包，本游戏的储物系统还包括能快捷存取弹匣的胸挂、能保证物品安全的保险箱——它们在<strong>功能性上做出了区分</strong>。</p>
+<h2 id="2mmo"><strong>2.MMO</strong></h2>
+<p>《最终幻想14》的随身<strong>背包</strong>是不可扩展的，始终为140格，它能存放装备、食物药品等消耗性道具、来源于敌人掉落或者玩家生产采集的素材、家具等几乎所有物品，具有最强的泛用性。与MMO的游戏容量相匹配，除了容量有限的背包以外，本游戏的储物系统还相当庞大。</p>
+<p>伴随本游戏丰富的职业选择而来的是庞杂的装备。游戏共有20个战斗特职，11个生产采集职业。不同职业的主手武器不能互通，不同性质（T、N、近战、远敏、法系、生产、采集）职业的饰品和防具基本不能互通。所以游戏设计了专门用来存储装备的“<strong>兵装库</strong>”系统，并实现“切换武器即切换职业”的游戏特色。</p>
+<p>便捷性上，背包、兵装库几乎同等，基本随时都可打开；功能性上二者区分明显，背包有最强的泛用性，兵装库只能存放装备。</p>
+<p><img src="https://liam11811.github.io/post-images/1665162940976.png" alt="" loading="lazy"><br>
+便捷性次之的是<strong>陆行鸟鞍囊</strong>（鸟包）和<strong>雇员仓库</strong>。鸟包相当于70格的背包，但是不可以在副本和野外战斗中打开。每名玩家初始有两名雇员，每名雇员的仓库有175格，但是只有在主城或住宅区的特定地点才能打开。如果爱好囤积或者经商的玩家仍缺少储物空间，游戏也提供扩充鸟包和雇员仓库的付费选项。</p>
+<p>最差的便捷性对应最细的细分程度。“<strong>投影台</strong>”就是专为外观幻化准备的，<strong>家具和庭具仓库</strong>则是专为装修准备的，二者在功能上分别对应“外观幻化”和“家园装修”两大非战斗玩法。前者只出现在主城旅馆和军队总部，后者只存在于家园。</p>
+<p>由此可见，对于本游戏储物系统而言，<strong>容量相对充足、泛用性强、便捷性高三个特性构成了“不可能三角”</strong>。笔者下面将着重谈谈“便捷性”的意义。</p>
+<p><strong>较差的便捷性意味着玩家想要进行存取就不得不进行一段路径基本可控的旅行/位移，从一个功能区到另一个功能区</strong>。以下几种行动路径是容易被想到的：（1）副本外、野外到主城：将不需要的副本掉落物和野怪掉落物从背包转移到雇员处委托卖出；（2）主城、副本外到家园：当玩家从市场上购买或者从副本获得家具时，即使不一定第一时间想到装修（因为许多家具未必符合玩家审美、未必具有高价值），背包容量限制也会令其回家园放置；（3）野外到家园或主城：在野外采集到素材后就地制作成家具用以装修或出售。更多类似的路径不胜枚举。</p>
+<p>图 ： 仓储系统限制下发生的功能区之间的转移</p>
+<figure data-type="image" tabindex="1"><img src="https://liam11811.github.io/post-images/1665159453046.png" alt="" loading="lazy"></figure>
+<p>如上图，仓储系统限制下发生的功能区之间的转移首先能调控游戏节奏，长期的战斗（尤其是反复刷取物品）容易导致疲劳，适时脱战回城或回家能减轻玩家的疲倦感；其次能引领玩家面对密集的人群和私人建筑群，向玩家<strong>展示</strong><sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>更炫酷、华美、珍稀的个人外观和家园装修，调动玩家想要获得它们的欲望——获得它们的前提当然是更投入地游玩；最后便于安排各种任务自然地穿插进游玩体验，主城是雇员仓库、投影台所在地，也是职业和转职、大国防联军等任务的接取地，在一次次回城存取和交易的过程中，玩家总会“偶遇”任务相关的NPC，并自然地展开一段新的冒险、解锁新的玩法。</p>
+<p>另一款MMO《激战2》的背包则是可扩展的。新手时期的背包容量非常之小，在游戏最初一小时的引导流程中，若玩家习惯于拾起野怪掉落物，背包甚至会装满数次，令新人不得不早早地开始拣选。随后发送至邮箱的新人福利会赠送玩家第一次背包扩充，极大缓解新人面临第一次背包容量危机的茫然和焦虑。</p>
+<p>笔者对免费游戏商业化的认识不甚深入，斗胆推测此中用意是引导玩家首次体验紧张的储物空间得到扩展后的如释重负，甚至是游戏进程得以继续推进的舒畅感，培养玩家空间紧张后首先想到扩容的路径依赖。</p>
+<h2 id="3非mmo的rpg"><strong>3.非MMO的RPG</strong></h2>
+<p>对许多其他RPG而言，背包系统服务于核心玩法。</p>
+<p>《原神》的背包容量在RPG中称得上非常大，而且可以随时取用。背包中武器容量为2000，圣遗物容量为1500，养成道具、食物和材料等物品共享2000的容量。<strong>夸张的武器和圣遗物容量反映了这款游戏较深的养成深度</strong>：绝大多数武器和圣遗物并无上场实战的价值，只是养成的材料。对重度玩家来说，上千个既不能分解、出售变废为宝，也暂时无法作为强化材料（因为值得养成的新圣遗物在概率的效应下迟迟未出现）。静静躺在仓库中的圣遗物是曾经数百次攻略副本的证明，也为刷出心仪的圣遗物后立即开始培养做足了准备。但是对笔者这种对强度追求不高的轻度玩家而言，背包容量基本可以视作是无限的，还省去了管理背包的麻烦，算是为轻度玩家减负了。</p>
+<p>ARPG《艾尔登法环》考验玩家面对强敌的策略安排和精密操作。顺应于此，《艾尔登法环》引入了了<strong>负重</strong>概念，并为较高的负重状态施加削弱，这也是魂系游戏的通行做法。本游戏的负重水平分为轻（负重上限的30%以下）、中（上限的30%~70%）、重（上限的70%~100%）、超重（超过上限）。其中超重状态下玩家将无法完成翻滚等重要的战术动作，其他状态下的翻滚时长变化如下图所示：</p>
+<figure data-type="image" tabindex="2"><img src="https://liam11811.github.io/post-images/1665159506397.png" alt="" loading="lazy"></figure>
+<p>另外，《艾尔登法环》的<strong>装备库是无限</strong>的，乐于挑战的玩家大可收集全武器；而在战斗中<strong>能迅捷切换的装备</strong>是有限的，这就迫使玩家在已有的大量武器中选择搭配出适宜自己战法且对当前敌人有针对性的搭配。配合游戏的出身选择和加点机制，玩家在初期一般会专精一种战法（如轻负重的观星者或者重甲持盾近战的流浪骑士），在累计的点数足以加强所有属性的游戏后期甚至多周目，玩家便可以自由探索各种战法。</p>
+<p>作为一款以<strong>步行涉险送货</strong>为核心玩法的RPG，《死亡搁浅》则进一步细化了负重。主角运送的货物和携带的装备不仅有精确的重量数值和大中小三档尺寸，它们在主角背部、肩部、双手、大腿外侧的重量分布还将直接影响主角的<strong>平衡</strong>能力。合理安排各个货架上背负的货物是出发送货前可选的游玩内容之一（也可以通过一键最优来跳过）；在艰辛的送货旅途中一边通过扫描仪侦测周边路面、一边不断根据各种信息调整重心和速度则是占据每个玩家大多数配送时间的常态。加入负重和平衡系统后，背包在《死亡搁浅》不再是单纯的储物空间，而是核心玩法的重要组成部分。</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>关于“展示”话题的进一步探讨，可移步作者的另一篇文字《谈“展示空间”》https://gamefriend.fun/post/tan-zhan-shi-kong-jian/。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#1%E5%B0%84%E5%87%BB%E6%B8%B8%E6%88%8F"><strong>1.射击游戏</strong></a></li>
+<li><a href="#2mmo"><strong>2.MMO</strong></a></li>
+<li><a href="#3%E9%9D%9Emmo%E7%9A%84rpg"><strong>3.非MMO的RPG</strong></a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://liam11811.github.io/post/lesslesswen-ming-5greatergreater-lesslesswen-ming-6greatergreater-zhan-dou-li-shu-zhi-jian-xi/">
+              <h3 class="post-title">
+                《文明5》《文明6》战斗力数值简析
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://liam11811.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
