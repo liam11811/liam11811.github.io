@@ -1,0 +1,230 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>《文明5》《文明6》战斗力数值简析 | Gamer的个人博客</title>
+<link rel="shortcut icon" href="https://liam11811.github.io/favicon.ico?v=1666361025305">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://liam11811.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="《文明5》《文明6》战斗力数值简析 | Gamer的个人博客 - Atom Feed" href="https://liam11811.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="《文明》系列游戏最新两作《文明5》《文明6》的战斗公式乃至整个战斗机制都与前两作大有不同。新两作中，一次战斗仅发生唯一一次结算；攻击力和防御力不再被区分，能决定单位在战斗中造成或承受的伤害的属性只有“战斗力”。
+两款游戏中发生交战的主体一般..." />
+    <meta name="keywords" content="SLG,数值" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://liam11811.github.io">
+  <img class="avatar" src="https://liam11811.github.io/images/avatar.png?v=1666361025305" alt="">
+  </a>
+  <h1 class="site-title">
+    Gamer的个人博客
+  </h1>
+  <p class="site-description">
+    记录游戏过程中的所思所想
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              《文明5》《文明6》战斗力数值简析
+            </h2>
+            <div class="post-info">
+              <span>
+                2022-10-06
+              </span>
+              <span>
+                9 min read
+              </span>
+              
+                <a href="https://liam11811.github.io/tag/bN18Wu0oZ/" class="post-tag">
+                  # SLG
+                </a>
+              
+                <a href="https://liam11811.github.io/tag/GnuYaUnP0/" class="post-tag">
+                  # 数值
+                </a>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://liam11811.github.io/post-images/lesslesswen-ming-5greatergreater-lesslesswen-ming-6greatergreater-zhan-dou-li-shu-zhi-jian-xi.png" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <p>《文明》系列游戏最新两作《文明5》《文明6》的战斗公式乃至整个战斗机制都与前两作大有不同。新两作中，一次战斗仅发生唯一一次结算；攻击力和防御力不再被区分，能决定单位在战斗中造成或承受的伤害的属性只有“战斗力”。</p>
+<p>两款游戏中发生交战的主体一般是是军事单位。不同单位的数值差异首先在于战斗力<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>，其次在于不直接和伤害计算相关的行动力和攻击距离。任何单位的最大生命值均为100，避免玩家在考虑战斗力的同时还考虑最大生命值的繁琐。</p>
+<h2 id="1伤害公式和战斗力数据"><strong>1.伤害公式和战斗力数据</strong></h2>
+<p>《文明5》和《文明6》的伤害公式已经被前人总结且得到公认。</p>
+<p>《文明5》伤害公式：random[24~36]*(pow(战力比+3, 4)/512 + 0.5)<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>.</p>
+<p>《文明6》伤害公式：random[24~36]*e^(战力差*0.04).</p>
+<p>笔者对于两公式的第一印象是，二者都引入了偏差在20%以内的随机性；接下来的一个印象是：《文明5》以比值、在《文明6》以差值衡量战斗力的差异——作商和作差正是数学上衡量两个值差异的基本办法。</p>
+<p>落实到游戏中，游戏进程推移，单位的战斗经验更丰富、科技和管理水平也越来越高，战斗力也应随之增长。据此，分别对应经验累积和科技进步，单位的战斗力成长也分为两种：<strong>晋升</strong>和<strong>升级</strong>。从伤害公式（尤其是战斗力差异的度量方式）我们不难推断：《文明6》的单位战斗力增长应该是相对均匀的；而《文明5》单位战斗力增长应是先慢后快，大体呈指数型。下面进入具体的分析阶段。</p>
+<h2 id="2晋升的纸面和实战效果"><strong>2.晋升的纸面和实战效果</strong></h2>
+<p>晋升旨在对训练扎实和战功累累的单位提供增益，以鼓励玩家练精兵、用精兵、培养精兵，而不是单纯追求单位数量。两作中单位升级对战斗力的加成效果（游戏内称为“晋升”效果）也与两部作品各自的战斗公式相适应。</p>
+<p>如图，以远程单位晋升的第一级（初始级）加成为例：<br>
+<img src="https://liam11811.github.io/post-images/1665157608992.png" alt="" loading="lazy"><br>
+<img src="https://liam11811.github.io/post-images/1665053133102.png" alt="" loading="lazy"></p>
+<p>不难看出，《文明5》的晋升是按比例加成战斗力，《文明6》的晋升加成是为战斗力增加固定数值。看起来两作的晋升都是单位进行确定性的增益，但是<strong>战斗力只有放在战斗中才有意义，晋升的作用需要在战斗中进行考量</strong>。</p>
+<p>在晋升中，《文明6》战斗公式的优势得以凸显，<strong>某种晋升给任意单位造成伤害的能力的增益是确定的</strong>。</p>
+<p>为衡量晋升对任意一单位的增益，令该单位攻击另一不变单位，设该单位晋升前战斗力比目标单位高出A，晋升后战斗力高出A+b，晋升前后对另一单位伤害分别为D1、D2。套用战斗公式可得，D2/D1=e<sup>0.04b，e</sup>0.04b是常数，这个值与是何种单位获得晋升无关。</p>
+<p>相比之下，<strong>晋升对《文明5》中单位造成伤害的能力的增益是不确定的</strong>。</p>
+<p>此时，设晋升前两单位战斗力之比为k，晋升后战斗力之比为（1+b）k，晋升后、前对同一单位造成伤害之比<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>D</mi><mn>2</mn><mi mathvariant="normal">/</mi><mi>D</mi><mn>1</mn><mo>=</mo><mo>(</mo><mn>256</mn><mo>+</mo><mo>[</mo><mo>(</mo><mn>1</mn><mo>+</mo><mi>b</mi><mo>)</mo><mi>k</mi><mo>+</mo><mn>3</mn><msup><mo>]</mo><mn>4</mn></msup><mo>)</mo><mi>d</mi><mi>i</mi><mi>v</mi><mo>[</mo><mn>256</mn><mo>+</mo><mo>(</mo><mi>k</mi><mo>+</mo><mn>3</mn><msup><mo>)</mo><mn>4</mn></msup><mo>]</mo></mrow><annotation encoding="application/x-tex">D2/D1 =(256+[(1+b)k+3]^4)div[256+(k+3)^4]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="mord">2</span><span class="mord">/</span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">2</span><span class="mord">5</span><span class="mord">6</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">b</span><span class="mclose">)</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord">3</span><span class="mclose"><span class="mclose">]</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord mathdefault">d</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mopen">[</span><span class="mord">2</span><span class="mord">5</span><span class="mord">6</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord">3</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span><span class="mclose">]</span></span></span></span>。b虽是常数，但该比值还依赖于晋升前两单位战斗力之比k，即同样的晋升对不同单位实际战斗的增益是不同的。</p>
+<p>综上所述，《文明6》以作差法衡量战斗力的差异、以固定值作为晋升，《文明5》以作商法衡量战斗力的差异、以固定比例作为晋升，看似都控制了晋升带来的实战增益，但得益于《文明6》战斗公式（主要是<strong>e^x型函数）的优越性</strong>，这一想法才在《文明6》得以完全实现。</p>
+<h2 id="3升级另一种数值成长"><strong>3.升级：另一种数值成长</strong></h2>
+<p>从数值的角度看，晋升和升级是单位成长的两大部分。</p>
+<p>晋升是游戏鼓励玩家产出并锻炼精兵的机制，其效果是为获得晋升的单位按比例（《文明5》）或者按固定数值（《文明6》）提升战斗力。<strong>“升级”<strong>则是游戏内单位随着科技进步和时代推移，通过消耗金钱等资源，提升为同类新单位的过程。某一大类兵种，比如肉搏类/骑兵类/近战舰艇类/远程舰艇类，各自有各自的</strong>升级路径</strong>，例如远古时代的勇士依次升级为剑士、长剑士、火枪手、来复枪兵、早期现代步兵、现代步兵。游戏内在同一升级路径中早期单位与后期单位的主要区别也在于战斗力高低，生命值都统一为100。</p>
+<p>对《文明6》进行分析，基于上文的准备工作，每提升任意点战斗力对伤害的加成都可以计算。笔者在统计了若干大类兵种升级路径的战斗力数值后，归纳了以下<strong>四种数值增加模式，它基本囊括了《文明6》中单位升级带来的数值加成</strong>。</p>
+<figure data-type="image" tabindex="1"><img src="https://liam11811.github.io/post-images/1665053148905.png" alt="" loading="lazy"></figure>
+<p>由上表可见，《文明6》的单位升级其实是四种程度不同的战斗力成长，其中又以程度适中的两种最为常见。在考虑了拟真和平衡问题后，建构整条升级路径其实是非常有规律可循的工作。</p>
+<p>而《文明5》单位升级带来的数值成长则远不如《文明6》规整。一大类单位升级路径中战斗力的变化基本呈现指数增长形式，且拟合的可信度较高，如下图。毕竟指数增长、科技爆炸、爆炸性增长这些词汇常常用来描述时代进步带来的巨大效应，《文明5》的战斗力成长也是符合一般认知的。</p>
+<figure data-type="image" tabindex="2"><img src="https://liam11811.github.io/post-images/1665053160217.png" alt="" loading="lazy"></figure>
+<p>从上图还可以看出，如果《文明5》存在未来时代，单位的战斗力还将继续膨胀至200~300；同时可以设想到的是，如果《文明6》也存在同样多的未来时代，单位的战斗力在隔代常规升级、大升级的基础上不会发生如此夸张的膨胀。《文明6》的数值设计为mod作者以及可能的dlc预留了健康的、直观的数值成长空间。</p>
+<h2 id="4代差和秒杀"><strong>4.代差和秒杀</strong></h2>
+<p>单位升级的前提是时代推移。《文明》系列单局游戏通常要跨越数个时代（在这两作中最大时代数均为8），尽管在早期生产的单位可以在满足科技等条件后升级为晚期时代的单位，不同时代的单位交战的情况仍然时有发生。<strong>如何模拟跨代交战中双方战损的巨大差异成为游戏需要考虑的问题</strong>。当单位的代差过大，落后的一方被秒杀而领先的一方几乎不受损失是合理的——装备火枪的西班牙远征队轻易征服无法获取马匹、铁矿的印加帝国是军事史上的经典战例。</p>
+<p>根据伤害公式可以计算出，当《文明5》单位战斗力之比达到3.17以上、《文明6》单位战斗力之差达到30.1，战斗的期望是高战力单位秒杀低战力单位。一般来说，两作中单位代差达到3就可以达到这种战斗力之比或之差。此时，《文明6》伤害公式的优越性再次凸显：前文定义的两次“隔代常规升级”和一次“隔代大升级”就可以将战斗力之差控制在35，不用计算都能轻松确保代差秒杀。</p>
+<p>《文明5》《文明6》采用的伤害公式虽然不同，但在基本遵循“<strong>差3代则秒杀</strong>”原则上二者是一致的。</p>
+<h2 id="5单位的合成"><strong>5.单位的“合成”</strong></h2>
+<p>《文明6》的单位不能堆叠在同一单元格，但是可以对两或三个同类单位进行编队，也就是通常意义上的“合成”，也是另一种形式上对系列作品中单位堆叠机制的回归。从数值上看，编队的特点有二：一是不会增加单位生命值上限，任何单位的生命值上限都是100，区别只在于战斗力高低，维持了数值的简洁；二是对战斗力的加成分别是两支单位合并+10战斗力、增加50%伤害，三支单位合并+17战斗力、增加100%伤害——可见单位的“合成”相当于前文定义的“隔代常规升级”或“作战重大变革”。</p>
+<p>在这一设定下，三支编队的步兵战斗力基本与领先两个时代的一支机械化步兵持平，给玩家带来堆叠数量以跨代击败先进敌方单位的可能性，<strong>往小了说是保持低科技多兵力文明和高科技少兵力文明之间的战力平衡，往大了说是保持战狂型文明和科技型文明之间的平衡、不同选择取向的玩家和AI间的平衡</strong>。</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>远程单位的战斗力被分为较低的“战斗力”和较高的“远程战斗力”，本文主要考虑后一个。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>此公式虽基本得到公认，但在极端情况会与实际值偏离。严谨使用时可分开考虑进攻伤害和反击伤害，并通过作倒数确保比值大于或者等于1。 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#1%E4%BC%A4%E5%AE%B3%E5%85%AC%E5%BC%8F%E5%92%8C%E6%88%98%E6%96%97%E5%8A%9B%E6%95%B0%E6%8D%AE"><strong>1.伤害公式和战斗力数据</strong></a></li>
+<li><a href="#2%E6%99%8B%E5%8D%87%E7%9A%84%E7%BA%B8%E9%9D%A2%E5%92%8C%E5%AE%9E%E6%88%98%E6%95%88%E6%9E%9C"><strong>2.晋升的纸面和实战效果</strong></a></li>
+<li><a href="#3%E5%8D%87%E7%BA%A7%E5%8F%A6%E4%B8%80%E7%A7%8D%E6%95%B0%E5%80%BC%E6%88%90%E9%95%BF"><strong>3.升级：另一种数值成长</strong></a></li>
+<li><a href="#4%E4%BB%A3%E5%B7%AE%E5%92%8C%E7%A7%92%E6%9D%80"><strong>4.代差和秒杀</strong></a></li>
+<li><a href="#5%E5%8D%95%E4%BD%8D%E7%9A%84%E5%90%88%E6%88%90"><strong>5.单位的“合成”</strong></a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://liam11811.github.io/post/lesslesszhong-guo-shi-jia-chang-greatergreater-shu-zhi-chu-tan/">
+              <h3 class="post-title">
+                《中国式家长》数值初探
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://liam11811.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,257 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>FPS经典地图“运输船”简析 | Gamer的个人博客</title>
+<link rel="shortcut icon" href="https://liam11811.github.io/favicon.ico?v=1666361025305">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://liam11811.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="FPS经典地图“运输船”简析 | Gamer的个人博客 - Atom Feed" href="https://liam11811.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="FPS经典地图“运输船”简析
+“运输船”是FPS《穿越火线》的一张经典团队竞技地图，并在《穿越火线HD》中被复刻。笔者将以复刻版地图为准，分析这张地图的设计构思，并小结设计团队竞技地图的几条原则，以及实现这些原则的策略。
+
+
+出生点
+
+
+警..." />
+    <meta name="keywords" content="地图设计,FPS" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://liam11811.github.io">
+  <img class="avatar" src="https://liam11811.github.io/images/avatar.png?v=1666361025305" alt="">
+  </a>
+  <h1 class="site-title">
+    Gamer的个人博客
+  </h1>
+  <p class="site-description">
+    记录游戏过程中的所思所想
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              FPS经典地图“运输船”简析
+            </h2>
+            <div class="post-info">
+              <span>
+                2022-08-30
+              </span>
+              <span>
+                8 min read
+              </span>
+              
+                <a href="https://liam11811.github.io/tag/wVvqPnkda/" class="post-tag">
+                  # 地图设计
+                </a>
+              
+                <a href="https://liam11811.github.io/tag/ZIz6yrTLQ/" class="post-tag">
+                  # FPS
+                </a>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://liam11811.github.io/post-images/fps-jing-dian-di-tu-yun-shu-chuan-jian-xi.jpeg" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <p>FPS经典地图“运输船”简析</p>
+<p>“运输船”是FPS《穿越火线》的一张经典团队竞技地图，并在《穿越火线HD》中被复刻。笔者将以复刻版地图为准，分析这张地图的设计构思，并小结设计团队竞技地图的几条原则，以及实现这些原则的策略。</p>
+<figure data-type="image" tabindex="1"><img src="https://liam11811.github.io/post-images/1664978152619.jpeg" alt="" loading="lazy"></figure>
+<ol>
+<li><strong>出生点</strong></li>
+</ol>
+<p><img src="https://liam11811.github.io/post-images/1664978158864.png" alt="" loading="lazy"><br>
+警匪双方的出生点都在地图两端的室内，结构基本相同：都有一左一右两个出口通向室外，另有一个地下出口连接船舱过道。这种设计在确保出生点相对密闭、安全的同时非常直观地将玩家的行动路线分为三条：左路、右路和船舱过道。</p>
+<ol start="2">
+<li><strong>船舱过道</strong></li>
+</ol>
+<figure data-type="image" tabindex="2"><img src="https://liam11811.github.io/post-images/1664978168066.jpeg" alt="" loading="lazy"></figure>
+<p>过道的主体位于地面以下，且一端是出生点，因此过道内一般不会发生交战，玩家可以快速通过。在过道的中部，玩家可经梯子攀爬到高处的吊舱以占据优势位置。在过道的尽头，玩家能到达本地图最经典的偷袭点位——吊舱。</p>
+<ol start="3">
+<li><strong>吊舱</strong></li>
+</ol>
+<p><img src="https://liam11811.github.io/post-images/1664978177031.jpeg" alt="" loading="lazy"><br>
+<img src="https://liam11811.github.io/post-images/1664978182802.jpeg" alt="" loading="lazy"><br>
+吊舱是全图唯一真正意义上的制高点。从吊舱可以几乎俯攻全图任何未被掩体遮蔽的位置。当然，更好的视野需要以暴露更多身位为代价——舱室“四面漏风”缺少遮掩，威胁来袭的潜在方向太多，狙击手无法兼顾。更何况团队竞技模式玩家复活速度快、游戏对复仇击杀有奖励，被击杀的玩家专门针对吊舱狙击手寻仇是一种常态。</p>
+<ol start="4">
+<li><strong>过道尽头</strong></li>
+</ol>
+<figure data-type="image" tabindex="3"><img src="https://liam11811.github.io/post-images/1664978219045.jpeg" alt="" loading="lazy"></figure>
+<p>过道尽头是重要的偷袭位置。玩家在垂直方向上攀过几个箱子后就可从船舱内部上升到比甲板高出一人高的位置，可以从侧面袭击敌方半场，或者直接跳出过道尽头近身正面攻击左路狙击点（参见下一小节）的敌人；如果面临危险，还可以迅速下落到安全的船舱过道内躲避。</p>
+<p>作为对优势位置的一种平衡，过道尽头处并未设置任何掩体，容易被反应敏捷的敌人反杀，同时也很容易被投掷物击伤或者逼退。</p>
+<ol start="5">
+<li><strong>左路狙击点</strong></li>
+</ol>
+<p><img src="https://liam11811.github.io/post-images/1664978245720.jpeg" alt="" loading="lazy"><br>
+<img src="https://liam11811.github.io/post-images/1664978249780.jpeg" alt="" loading="lazy"><br>
+跨过出生点左侧门就是地图中最热门的狙击位置。警匪两家左路狙击点之间的连线无任何掩体阻挡，同时也是地图表面最长的连线（矩形对角线），非常适合对狙。</p>
+<p>在本游戏中，狙击的乐趣至少有两种：与同样使用狙击枪的对手展开容错率低、你死我活的对狙，以及利用高倍镜和高单发伤害的不对称优势狙杀未使用狙击枪的敌人。在左路狙击点，这两种乐趣都可以充分享受到。</p>
+<p>左路狙击点为享受对狙乐趣的玩家提供了绝佳位置，但这一地点也有自己的弱势。玩家的注意力和枪线基本集中在斜前方，而鲜少注意正面和侧面来袭的危险。从吊舱、过道尽头和右路进攻都可以打得狙击手措手不及。</p>
+<ol start="6">
+<li><strong>C形箱/T形箱</strong></li>
+</ol>
+<figure data-type="image" tabindex="4"><img src="https://liam11811.github.io/post-images/1664978268722.jpeg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://liam11811.github.io/post-images/1664978275733.jpeg" alt="" loading="lazy"></figure>
+<p>箱体的形状极有可能是在致敬CT/T的经典阵营划分，其功能性也很强。</p>
+<p>C和T形箱的内侧是重要的回防空间。体积较大的横向掩体遮蔽战场正面，排除远距离狙击封死对方出生点的可能性；体积较小的侧向掩体能限制突入到本方后半场之敌的视线，并使得防守者从侧后方攻击突入的敌人成为可能，大大增加了压家的难度。</p>
+<p>C形箱下部的掩体平行于过道尽头，直接阻挡偷袭者的枪线，防守者可以快速进入“C”字内部躲避或借助该掩体反击。T形箱虽然缺少C形箱下部的掩体，但是箱体顶部多出一个小箱体，是继左路狙击点、吊舱后的第三大狙击位置。C和T形箱位置对称、主体相似、附件不同，称得上是差异化的平衡。</p>
+<p>值得一提的是，擅长身法的玩家以C/T型箱为跳板还能跳进对手方的过道尽头，甚至一路渗透到对手方的出生点。从对手的偷袭路线反向偷袭对手，在战术上是高风险和高收益并存的一种策略，在游戏趣味上更是出奇制敌的小妙招。</p>
+<ol start="7">
+<li><strong>中场三箱</strong></li>
+</ol>
+<p><img src="https://liam11811.github.io/post-images/1664978310605.jpeg" alt="" loading="lazy"><br>
+战场的中心是两大一小三个箱型掩体。这是一个简洁又能很好实现其功能的设计。</p>
+<p><img src="https://liam11811.github.io/post-images/1664978319899.jpeg" alt="" loading="lazy"><br>
+<img src="https://liam11811.github.io/post-images/1664978324111.jpeg" alt="" loading="lazy"><br>
+三箱中间空隙刚好允许左路狙击点的枪线穿过，可见地图设计者保证对角对狙线净空的意图；其中两个大箱体两侧空隙最窄处仅宽一个身位有余，且最窄处恰好是箱体的转角处，遮蔽了从两侧窥视敌方后半场的视线，更为近身遭遇战创造了机会；而中间相对孤立的小箱体在中场创造出左路右路以外的第三条交战路线——如果没有小箱体，中路将毫无遮掩，对枪的乐趣大打折扣、基于peek的战术选择更是不可能。</p>
+<ol start="8">
+<li><strong>左右路进攻路线</strong></li>
+</ol>
+<figure data-type="image" tabindex="6"><img src="https://liam11811.github.io/post-images/1664978335258.jpeg" alt="" loading="lazy"></figure>
+<p>一方的右路进攻路线对应另一方的左路，反之亦然。</p>
+<p>既然经过地图对角线有被狙杀风险较高，持短枪的玩家可以走左右两条平行路线。单条路线被两或三个箱体截断，杜绝继对角线之后超长枪线再次出现的可能。</p>
+<p>前文梳理了本地图各路线和点位设计的精妙之处，下面笔者将试图小结团队竞技地图设计的几大原则，以及实现这些原则的策略。</p>
+<ol>
+<li><strong>基本对称原则</strong></li>
+</ol>
+<p>基本对称的地图适应于团队竞技的特性。本地图整体上最大的不对称之处是中场三箱，然而其局部也大致呈现轴对称的特点，划分出对称的左-中-右三路。</p>
+<ol start="2">
+<li><strong>动线明确化原则</strong></li>
+</ol>
+<p>出生点即清晰地划分出左、右、船舱过道三条路线，每条路线意味着不同的战术取向。除了战术性后退，玩家基本不会走回头路或者反复绕路。如此一来，对局的节奏有所加快。</p>
+<ol start="3">
+<li><strong>风险-收益并存原则</strong></li>
+</ol>
+<p>没有完美的点位，没有完美的动线。更高的视野会招致多条枪线；畅快斜线对狙的点位免不了从正面和侧面被偷袭；深入敌方半场将面临回防者的身位优势。正因为没有完美的点位和动线，整张地图基本不存在玩家扎堆的情况，唯一可能扎堆的左路狙击点也和点位空间狭小、对狙玩家移动范围小有很大关系。</p>
+<p>为确保这一大原则，地图设计中还要注意采取<strong>点位互相制衡的策略</strong>。吊舱、过道尽头和左路狙击点三大热门点位间就存在制衡关系：在己方的三个点位之一可以攻击敌方的另两个点位；在三个点位之一的敌人也可以压制己方的两个点位。上述三个热门点位各有其优势，但在互相制衡这一点上它们是一致的，没有哪一个点位过于强势。</p>
+<ol start="4">
+<li><strong>乐趣细分原则</strong></li>
+</ol>
+<p>多种战术选择带来多种乐趣，既能满足玩家形形色色的需求，也避免单局内战斗体验过于单一。使用狙击枪的玩家在享受哪些乐趣？简单回答“狙人的乐趣”显然是不够的。要细分给玩家提供的乐趣以及玩家享受的乐趣，首要考虑的问题之一就是玩家偏好的<strong>交战距离</strong>。</p>
+<p><strong>在地图设计中，调整掩体体积和位置以截短或延长枪线是最直接的控制枪线长度、进而控制交战距离的方法</strong>。实际交战距离不会超出地图设计上的枪线长度，而且由于各类型枪械射速、单发伤害乃至倍镜等参数各有不同，各自的优势交战距离也各不相同。因此设计地图时考虑在一张地图上呈现多种交战距离是必要的。</p>
+<p>仍以狙击为例，通过巧妙的地图设计，远距离定点对狙、中远距离不对称狙杀短枪使用者、移动前压的冲锋狙以及从制高点狙击、在同一高度狙击的体验都可以在同一张地图中享受到。同理，针对乐于使用短枪的玩家，也有中远距离对枪、中近距离侧袭、近距离转角杀等多种选择。</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://liam11811.github.io/post/ce-shi/">
+              <h3 class="post-title">
+                【文化】《赛博朋克2077》与赛博朋克
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://liam11811.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

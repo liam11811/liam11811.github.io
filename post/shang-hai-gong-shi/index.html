@@ -1,0 +1,205 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>伤害公式的基础总结 | Gamer的个人博客</title>
+<link rel="shortcut icon" href="https://liam11811.github.io/favicon.ico?v=1666361025305">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://liam11811.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="伤害公式的基础总结 | Gamer的个人博客 - Atom Feed" href="https://liam11811.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="等式
+损失=攻击
+符合直觉
+极致简单
+没有防御 防具的设计要大改 游戏丰富性和付费点打折扣 但用等式的游戏内容未必少 为弥补丰富性 可以拆攻击 增加攻击种类 按属性、按武器、按攻击方式 同时增加防御种类
+但是可以有护盾、第二hp 内容丰富度..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://liam11811.github.io">
+  <img class="avatar" src="https://liam11811.github.io/images/avatar.png?v=1666361025305" alt="">
+  </a>
+  <h1 class="site-title">
+    Gamer的个人博客
+  </h1>
+  <p class="site-description">
+    记录游戏过程中的所思所想
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              伤害公式的基础总结
+            </h2>
+            <div class="post-info">
+              <span>
+                2022-10-20
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <p>等式<br>
+损失=攻击<br>
+符合直觉<br>
+极致简单<br>
+没有防御 防具的设计要大改 游戏丰富性和付费点打折扣 但用等式的游戏内容未必少 为弥补丰富性 可以拆攻击 增加攻击种类 按属性、按武器、按攻击方式 同时增加防御种类<br>
+但是可以有护盾、第二hp 内容丰富度上未必低于防御力<br>
+FPS（高频攻击） 免费小游戏</p>
+<p>减法公式<br>
+Dam=Atk-Def<br>
+符合直觉<br>
+规律明显<br>
+有敏感点：Atk和Dam接近时，小小的数值提升对回合数的影响极大，对玩家的刺激明显。</p>
+<p>破防问题<br>
+无法直观感受到结果的变化 数值变化与最终的伤害输出缺乏直接的联系 调试攻击 对损失的感觉不直接<br>
+变体1：攻击×2=防御+损失 若自由加点 造成属性价值失衡<br>
+变体2：注意属性投放 还是有属性价值失衡的问题<br>
+适合有“坎（关卡、片区）”的游戏 适合无成长或者成长较小的游戏 不适合成长丰富（付费升级点多）、自由加点的游戏<br>
+不适合存在怪物攻击怪物的游戏（除非给怪物攻击怪物单独做一套数值）</p>
+<p>完美？公式<br>
+损失=攻击×攻击系数÷防御<br>
+推导速度快<br>
+调试速度快</p>
+<p>乘法公式<br>
+Dam=Atk×（1-Def/Def+X）=Atk×X/（Def+X）<br>
+攻击和损失关系清楚<br>
+但防御不直观 大方向是防御高损失低 防御的成长前后不规律<br>
+X是什么？也不直观 X越低，防御的效力越强<br>
+变体1：X=常数 王者荣耀、英雄联盟 单局内成长相对可控<br>
+变体2：X=常数+攻方等级修正（等级×倍数） 随着攻方等级提升，防方也需要增加防御值，防御的投放依赖于等级<br>
+变体3：X=Atk  防御的投放可以伴随着攻击的投放而投放 Dam=Atk^2/(Atk+Def)（这也是所谓“除法公式”的一种）</p>
+<p>除法公式<br>
+变体1：Dam=Atk/Def<br>
+攻方线性投放，伤害不变<br>
+变体2：Dam=Atk^2/Def<br>
+Dam可能高于Atk，不合常识；攻击价值过高。<br>
+变体3：Dam=Atk^2/(Atk+Def)</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://liam11811.github.io/post/ji-lu-zai-xiao-qi-jian-you-xi-xiang-guan-ke-cheng-zhong-de-xiang-fa-sui-pian/">
+              <h3 class="post-title">
+                【记录】在校期间游戏相关课程中的想法碎片
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://liam11811.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
